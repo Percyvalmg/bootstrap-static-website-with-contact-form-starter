@@ -1,5 +1,6 @@
 import React from "react";
 import { Footer, Header, SEO } from ".";
+import {companyDetails} from "../data";
 
 interface LayoutProps {
   description: string;
@@ -19,10 +20,11 @@ export const Layout: React.FC<LayoutProps> = ({
         description={description}
         title={title}
         hidePageFromSearchEngines={hidePageFromSearchEngines}
+        companyDetails={companyDetails}
       />
-      <Header />
+      <Header companyDetails={companyDetails} />
       {children}
-      <Footer />
+      <Footer companyDetails={companyDetails}/>
     </>
   );
 };
