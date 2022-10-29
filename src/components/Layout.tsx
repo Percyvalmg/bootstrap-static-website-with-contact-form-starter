@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer, Header, SEO } from ".";
 import {companyDetails} from "../data";
+import { ScrollTopBtn } from "./ScrollTopBtn";
 
 interface LayoutProps {
   description: string;
@@ -25,6 +26,7 @@ export const Layout: React.FC<LayoutProps> = ({
       <Header companyDetails={companyDetails} />
       {children}
       <Footer companyDetails={companyDetails}/>
+      <ScrollTopBtn/>
     </>
   );
 };
